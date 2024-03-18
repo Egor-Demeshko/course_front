@@ -1,0 +1,15 @@
+@import url("/node_modules/normalize.css");
+@import url("/colors.css");
+
+* * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, Ubuntu, Inter, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

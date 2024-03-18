@@ -1,0 +1,20 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --white-violet: #f7f7fe;
+    --semi-violet: #cbcdff;
+    --violet: #35387d;
+    --light-dark-violet: #595cb4;
+    --red: #e10000;
+    --semi-red: #f76b6b;
+
+    /* MAIN COLORS */
+    --background: var(--white-violet);
+    --element-main: var(--violet);
+    --element-main-transfer: var(--light-dark-violet);
+    --element-danger: var(--red);
+    --element-danger-transfer: var(--semi-red);
+    --font-color-main: var(--black);
+    --main-transition-state: var(--semi-violet);
+    --light-font: var(--white);
+}
