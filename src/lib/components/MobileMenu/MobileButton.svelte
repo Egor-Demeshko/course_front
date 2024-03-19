@@ -2,7 +2,10 @@
     import { mobileMenuOpenState } from "$lib/components/MobileMenu/stores/mobileMenu.js";
 </script>
 
-<button on:click={() => mobileMenuOpenState.set(!$mobileMenuOpenState)}>
+<button
+    on:click={() => mobileMenuOpenState.set(!$mobileMenuOpenState)}
+    aria-label="Открыть мобильное меню"
+>
     <span></span>
     <span></span>
     <span></span>

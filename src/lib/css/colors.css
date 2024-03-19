@@ -17,4 +17,7 @@
     --font-color-main: var(--black);
     --main-transition-state: var(--semi-violet);
     --light-font: var(--white);
+
+    /*GRADIENTS*/
+    --key-block-gradient: linear-gradient(to bottom, #c7c9ff 0%, #ffc6c6 100%);
 }

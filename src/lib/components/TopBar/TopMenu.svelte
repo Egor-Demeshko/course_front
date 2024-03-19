@@ -1,14 +1,20 @@
 <script>
-    //TODO первонально сервер будет давать данные по меню.
-    //тут мы данные получить из store data
+    import { page } from "$app/stores";
 
-    const testMenu = ["О курсе", "Стоимость", "Документы"];
+    const menus = $page.data.menus;
 </script>
 
-<nav>
-    <ul>
-        {#each testMenu as item}
-            <li><a href="#">{item}</a></li>
+<nav itemscope itemtype="https://schema.org/SiteNavigationElement">
+    <ul itemprop="about" itemscope itemtype="https://schema.org/ItemList">
+        {#each menus as { name, link }}
+            <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ItemList"
+            >
+                <a href={link}>{name}</a>
+                <meta itemprop="name" content={name} />
+            </li>
         {/each}
     </ul>
 </nav>

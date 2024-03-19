@@ -5,13 +5,11 @@
 </script>
 
 <TopBar />
-<section></section>
+
+<slot />
+
 <MobileButton />
 <MobileSliderMenu />
 
 <style>
-    section {
-        margin: auto 0;
-        max-width: 1410px;
-    }
 </style>

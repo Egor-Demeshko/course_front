@@ -1,10 +1,18 @@
 <script>
     export let data = { name: "Кнопка", type: "main" };
+    export let wide_button = false;
+    export let clickHandle = () => {};
+    export let ariaData = { label: "Кнопка" };
 
     const { name, type } = data;
 </script>
 
-<button class={type}>{name}</button>
+<button
+    class={type}
+    class:wide_button
+    on:click={clickHandle}
+    aria-label={ariaData.label}>{name}</button
+>
 
 <style>
     button {
@@ -24,5 +32,9 @@
 
     button.accent:hover {
         background-color: var(--element-danger-transfer);
+    }
+
+    button.wide_button {
+        width: 100%;
     }
 </style>

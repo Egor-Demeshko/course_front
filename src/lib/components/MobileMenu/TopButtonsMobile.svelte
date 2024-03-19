@@ -18,9 +18,9 @@
 </script>
 
 {#each buttons as { name, type }}
-    {#if type === "accent"}
-        <Button data={{ name, type }} --main-color="var(--element-danger)" />
-    {:else}
-        <Button data={{ name, type }} --main-color="var(--element-main)" />
-    {/if}
+    <Button
+        data={{ name, type }}
+        wide_button={true}
+        --main-color="var(--element-main)"
+    />
 {/each}
