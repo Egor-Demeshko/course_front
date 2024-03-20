@@ -9,5 +9,5 @@
 /*Общее центрирование блоков на страницах*/
 .site_center {
     margin: 0 auto;
-    width: 1410px;
+    max-width: 1410px;
 }

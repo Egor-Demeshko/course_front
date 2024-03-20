@@ -3,7 +3,9 @@
 </script>
 
 <button
-    on:click={() => mobileMenuOpenState.set(!$mobileMenuOpenState)}
+    on:click={() => {
+        mobileMenuOpenState.set(!$mobileMenuOpenState);
+    }}
     aria-label="Открыть мобильное меню"
 >
     <span></span>

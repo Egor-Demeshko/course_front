@@ -22,12 +22,12 @@
 <style>
     nav {
         font-weight: bold;
-        font-size: 1.125rem;
+        font-size: clamp(0.875rem, 1.8vw, 1.125rem);
     }
 
     ul {
         display: flex;
-        gap: clamp(0.875rem, 1.8vw, 1.875rem);
+        gap: clamp(0.4rem, 1.8vw, 1.875rem);
         list-style: none;
         margin: 0;
         padding: 0;
@@ -47,5 +47,11 @@
 
     a:hover {
         background-color: var(--main-transition-state);
+    }
+
+    @media screen and (max-width: 500px) {
+        ul {
+            justify-content: center;
+        }
     }
 </style>

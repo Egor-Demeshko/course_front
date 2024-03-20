@@ -3,8 +3,19 @@
     import TopButtonsMobile from "./TopButtonsMobile.svelte";
     import { mobileMenuOpenState } from "$lib/components/MobileMenu/stores/mobileMenu.js";
     import Button from "$lib/components/AtomComponents/Button.svelte";
+    import { onMount } from "svelte";
 
     $: isMenuOpen = $mobileMenuOpenState;
+
+    onMount(() => {
+        mobileMenuOpenState.subscribe((value) => {
+            if (value) {
+                document.documentElement.style.overflow = "hidden";
+            } else {
+                document.documentElement.style.overflow = "auto";
+            }
+        });
+    });
 </script>
 
 <div
@@ -22,7 +33,6 @@
             <div class="w-100 mt-26">
                 <Button
                     data={{ name: "Закрыть", type: "accent" }}
-                    --main-color="var(--element-danger)"
                     wide_button={true}
                     clickHandle={() => mobileMenuOpenState.set(false)}
                     ariaData={{ label: "Закрыть мобильное меню" }}

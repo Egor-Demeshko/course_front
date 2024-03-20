@@ -1,5 +1,13 @@
 <script>
     import Button from "$lib/components/AtomComponents/Button.svelte";
+    import { modalState } from "$lib/components/AtomComponents/stores.js";
+    import {
+        MODAL_TYPES_CONTACTS,
+        MODAL_TYPES_LOGIN,
+        MODAL_TYPES_REGISTRATION,
+    } from "$lib/components/AtomComponents/modalConst";
+
+    let isLoggedIn = false;
 
     const buttons = [
         {
@@ -19,13 +27,30 @@
 
 <div>
     {#each buttons as { name, type }}
-        {#if type === "accent"}
+        {#if name === "Контакты"}
             <Button
                 data={{ name, type }}
-                --main-color="var(--element-danger)"
+                clickHandle={() => {
+                    modalState.set({ type: MODAL_TYPES_CONTACTS, show: true });
+                }}
             />
-        {:else}
-            <Button data={{ name, type }} --main-color="var(--element-main)" />
+        {:else if name === "Вход"}
+            <Button
+                data={{ name: isLoggedIn ? "Профиль" : "Вход", type }}
+                clickHandle={() => {
+                    modalState.set({ type: MODAL_TYPES_LOGIN, show: true });
+                }}
+            />
+        {:else if !isLoggedIn}
+            <Button
+                data={{ name, type }}
+                clickHandle={() => {
+                    modalState.set({
+                        type: MODAL_TYPES_REGISTRATION,
+                        show: true,
+                    });
+                }}
+            />
         {/if}
     {/each}
 </div>

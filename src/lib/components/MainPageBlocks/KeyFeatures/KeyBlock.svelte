@@ -18,7 +18,7 @@
 
 <style>
     .key_block {
-        padding: 2.5rem 2.25rem;
+        padding: clamp(1.25rem, 2.7vw, 2.5rem) clamp(1.125rem, 2.56vw, 2.25rem);
         background-image: var(--key-block-gradient);
         border-radius: 14px;
     }
@@ -34,12 +34,14 @@
     }
     .key_block__first-row {
         display: grid;
-        grid-template: 2.56rem 2.56rem / 1fr auto;
+        grid-template:
+            clamp(1.28rem, 2.8vw, 2.56rem) clamp(1.28rem, 2.8vw, 2.56rem)
+            / 1fr auto;
         column-gap: 0.75rem;
     }
 
     .key_block__first-row p:first-child {
-        font-size: 5.125rem;
+        font-size: clamp(2.56rem, 5.7vw, 5.125rem);
         font-family: Stoke, Ubuntu, sans-serif;
         grid-row: 1 / 3;
         justify-self: start;
@@ -51,14 +53,14 @@
     }
 
     .key_block__first-row p:nth-child(2) {
-        font-size: 2.5rem;
+        font-size: clamp(1.25rem, 2.7vw, 2.5rem);
         font-weight: bold;
         text-transform: uppercase;
         grid-row: 1 / 2;
     }
 
     .key_block__second-row p:first-child {
-        font-size: 2.375rem;
+        font-size: clamp(1.188rem, 2.6vw, 2.375rem);
         text-transform: lowercase;
         font-weight: bold;
         text-align: center;

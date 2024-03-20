@@ -2,13 +2,15 @@
     export let name = "";
 </script>
 
-<div>
-    <h2>{name}</h2>
+<div style="overflow: hidden">
+    <div class="site_center">
+        <h2>{name}</h2>
+    </div>
 </div>
 
 <style>
     h2 {
-        font-size: 2rem;
+        font-size: clamp(1.125rem, 2.2vw, 2rem);
         font-weight: bold;
         color: var(--element-main);
         position: relative;
@@ -25,6 +27,7 @@
         transform: translateX(-34px);
         width: 20vw;
         border-radius: 4px;
+        z-index: 4;
     }
 
     h2:after {
@@ -35,7 +38,7 @@
         top: 50%;
         left: 100%;
         transform: translateX(34px);
-        width: 100%;
+        width: 90vw;
         border-radius: 4px;
     }
 </style>
