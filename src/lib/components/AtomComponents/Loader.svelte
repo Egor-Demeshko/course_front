@@ -13,7 +13,6 @@
         height: 64px;
         border-radius: 50%;
         perspective: 800px;
-        display: none;
     }
 
     .loader__inner {

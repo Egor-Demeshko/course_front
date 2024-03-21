@@ -5,6 +5,7 @@
     import Footer from "$lib/components/Footer.svelte";
     import Modal from "$lib/components/AtomComponents/Modal/Modal.svelte";
     import TopBar from "$lib/components/TopBar/TopBar.svelte";
+    import MobileButton from "$lib/components/MobileMenu/MobileButton.svelte";
 </script>
 
 <TopBar />
@@ -14,7 +15,7 @@
     <KeyFeatures />
     <Documents />
 </main>
-
+<MobileButton />
 <Footer />
 <Modal />
 
